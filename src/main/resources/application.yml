@@ -62,3 +62,6 @@ spring:
         event-out:
           destination: reserveresort
           contentType: application/json
+
+server:
+  port: 8081
