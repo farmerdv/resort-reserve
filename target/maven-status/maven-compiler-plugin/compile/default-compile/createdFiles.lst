@@ -1,0 +1,13 @@
+reserveresort\Confimed.class
+reserveresort\ReserveController.class
+reserveresort\external\Cancellation.class
+reserveresort\external\CancellationService.class
+reserveresort\ReserveCanceled.class
+reserveresort\ReserveRepository.class
+reserveresort\AbstractEvent$1.class
+reserveresort\AbstractEvent.class
+reserveresort\Reserved.class
+reserveresort\config\kafka\KafkaProcessor.class
+reserveresort\ReserveApplication.class
+reserveresort\PolicyHandler.class
+reserveresort\Reserve.class
