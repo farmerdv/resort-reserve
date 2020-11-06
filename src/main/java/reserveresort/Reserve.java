@@ -18,14 +18,21 @@ public class Reserve {
 
     @PostPersist
     public void onPostPersist(){
-        Reserved reserved = new Reserved();
-        reserved.setResortId(this.getResortId());
-        reserved.setRoomId(this.getRoomId());
-        reserved.setPeopleCount(this.getPeopleCount());
 
-        BeanUtils.copyProperties(this, reserved);
-        reserved.publishAfterCommit();
+        System.out.println("#####34asdfasdf status" + this.status);
 
+        if("Reserve".equals(this.status)) {
+
+            System.out.println("##### status" + this.status);
+            Reserved reserved = new Reserved();
+            reserved.setResortId(this.getResortId());
+            reserved.setRoomId(this.getRoomId());
+            reserved.setPeopleCount(this.getPeopleCount());
+            reserved.setStatus(this.getStatus());
+
+            BeanUtils.copyProperties(this, reserved);
+            reserved.publishAfterCommit();
+        }
     }
 
     @PreRemove

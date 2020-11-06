@@ -4,6 +4,34 @@ public class Confimed extends AbstractEvent {
 
     private Long id;
     private String reserveId;
+    private String resortId;
+    private String roomId;
+
+    public String getResortId() {
+        return resortId;
+    }
+
+    public void setResortId(String resortId) {
+        this.resortId = resortId;
+    }
+
+    public String getRoomId() {
+        return roomId;
+    }
+
+    public void setRoomId(String roomId) {
+        this.roomId = roomId;
+    }
+
+    public Integer getPeopleCount() {
+        return peopleCount;
+    }
+
+    public void setPeopleCount(Integer peopleCount) {
+        this.peopleCount = peopleCount;
+    }
+
+    private Integer peopleCount;
     private String status;
 
     public Long getId() {

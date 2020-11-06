@@ -20,10 +20,17 @@ public class PolicyHandler{
     @StreamListener(KafkaProcessor.INPUT)
     public void wheneverConfimed_UpdateStatus(@Payload Confimed confimed){
 
+        System.out.println("##### wheneverConfimed_UpdateStatus : " + confimed.toJson());
+
         if(confimed.isMe()){
             Reserve reserve = new Reserve();
-            reserve.setStatus("ConfirmCancelled");
+            reserve.setStatus("Confirmed");
+            reserve.setResortId(confimed.getResortId());
+            reserve.setRoomId(confimed.getRoomId());
+            reserve.setPeopleCount(confimed.getPeopleCount());
+            reserveRepository.findById(confimed.getId());
             reserveRepository.save(reserve);
+
             System.out.println("##### listener UpdateStatus : " + confimed.toJson());
         }
     }
