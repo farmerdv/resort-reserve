@@ -37,7 +37,7 @@ server:
 
 api:
   url:
-    confirm: http://localhost:8082/confirms
+    confirm: http://localhost:8082
 ---
 
 spring:
